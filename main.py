@@ -5,8 +5,11 @@ def fib_recursive(n, counts):
     each time fib_recursive(i, counts) is called.
     """    
     counts[n] += 1
-    ###TODO
-    pass
+    if n == 0:
+      return 0
+    if n == 1:
+      return 1
+    return fib_recursive(n-1, counts) + fib_recursive(n-2, counts)
     
 
     
@@ -25,3 +28,4 @@ def fib_bottom_up(n):
 def fib_bottom_up_better(n):
     ###TODO
     pass
+
